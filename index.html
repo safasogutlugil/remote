@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>TV Remote</title>
+<meta name="theme-color" content="#1b2130">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TV Remote">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-power" viewBox="0 0 24 24"><path d="M12 3v8"/><path d="M6.3 6.8a8 8 0 1 0 11.4 0"/></symbol>
+    <symbol id="i-input" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9.5 11h5M12.5 9l2 2-2 2"/></symbol>
+    <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6 10h.01M9 10h.01M12 10h.01M15 10h.01M18 10h.01M7 14h10"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><path d="M6 5h.01M12 5h.01M18 5h.01M6 11h.01M12 11h.01M18 11h.01M6 17h.01M12 17h.01M18 17h.01"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5v14l11-7z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-rew" viewBox="0 0 24 24"><path d="M11 6 4 12l7 6zM20 6l-7 6 7 6z"/></symbol>
+    <symbol id="i-ff" viewBox="0 0 24 24"><path d="m13 6 7 6-7 6zM4 6l7 6-7 6z"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5v14l-4.5-4.5H4z"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></symbol>
+  </defs>
+</svg>
+
+<main class="remote" id="remote">
+  <header class="top">
+    <button class="status" id="status" aria-live="polite">
+      <span class="status-title" id="statusTitle">Starting…</span>
+      <span class="status-sub" id="statusSub"></span>
+    </button>
+    <button class="icon-btn" data-sheet="settings" aria-label="Settings"><svg><use href="#i-gear"/></svg></button>
+  </header>
+
+  <div class="row row-top">
+    <button class="key key-power" id="powerBtn" aria-label="Power"><svg><use href="#i-power"/></svg></button>
+    <div class="row-top-right">
+      <button class="key key-small" data-sheet="inputs" aria-label="Inputs"><svg><use href="#i-input"/></svg></button>
+      <button class="key key-small" data-sheet="keyboard" aria-label="Keyboard"><svg><use href="#i-keyboard"/></svg></button>
+      <button class="key key-small" data-sheet="numbers" aria-label="Number pad and more buttons"><svg><use href="#i-grid"/></svg></button>
+    </div>
+  </div>
+
+  <div class="mode" role="tablist" aria-label="Navigation mode">
+    <button role="tab" class="mode-btn is-active" data-mode="dpad" aria-selected="true">Arrows</button>
+    <button role="tab" class="mode-btn" data-mode="pad" aria-selected="false">Touchpad</button>
+  </div>
+
+  <section class="nav-area">
+    <div class="dpad" id="dpad">
+      <div class="halo" id="halo" aria-hidden="true"></div>
+      <button class="dir dir-up" data-key="UP" data-repeat aria-label="Up"><svg><use href="#i-up"/></svg></button>
+      <button class="dir dir-right" data-key="RIGHT" data-repeat aria-label="Right"><svg><use href="#i-up"/></svg></button>
+      <button class="dir dir-down" data-key="DOWN" data-repeat aria-label="Down"><svg><use href="#i-up"/></svg></button>
+      <button class="dir dir-left" data-key="LEFT" data-repeat aria-label="Left"><svg><use href="#i-up"/></svg></button>
+      <button class="ok" data-key="ENTER" aria-label="OK">OK</button>
+    </div>
+    <div class="pad" id="pad" hidden>
+      <div class="pad-surface" id="padSurface">
+        <span class="pad-hint">Drag to move the pointer.<br>Tap to select. Two fingers scroll.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="row row-nav">
+    <button class="key key-label" data-key="BACK"><svg><use href="#i-back"/></svg><span>Back</span></button>
+    <button class="key key-label" data-key="HOME"><svg><use href="#i-home"/></svg><span>Home</span></button>
+    <button class="key key-label" data-key="MENU"><svg><use href="#i-menu"/></svg><span>Settings</span></button>
+  </div>
+
+  <div class="row row-rockers">
+    <div class="rocker" aria-label="Volume">
+      <button class="rocker-btn" data-vol="1" data-repeat aria-label="Volume up"><svg><use href="#i-plus"/></svg></button>
+      <button class="rocker-mid" id="muteBtn" aria-label="Mute">
+        <span class="vol-num" id="volNum">–</span>
+        <span class="rocker-label" id="volLabel">Vol</span>
+      </button>
+      <button class="rocker-btn" data-vol="-1" data-repeat aria-label="Volume down"><svg><use href="#i-minus"/></svg></button>
+    </div>
+
+    <div class="media">
+      <button class="key key-media" data-key="REWIND" aria-label="Rewind"><svg><use href="#i-rew"/></svg></button>
+      <button class="key key-media" data-key="FASTFORWARD" aria-label="Fast forward"><svg><use href="#i-ff"/></svg></button>
+      <button class="key key-media" data-key="PLAY" aria-label="Play"><svg><use href="#i-play"/></svg></button>
+      <button class="key key-media" data-key="PAUSE" aria-label="Pause"><svg><use href="#i-pause"/></svg></button>
+      <button class="key key-media key-wide" data-key="EXIT">Exit</button>
+    </div>
+
+    <div class="rocker" aria-label="Channel">
+      <button class="rocker-btn" data-key="CHANNELUP" data-repeat aria-label="Channel up"><svg><use href="#i-up"/></svg></button>
+      <div class="rocker-mid rocker-mid-static"><span class="rocker-label">Ch</span></div>
+      <button class="rocker-btn rocker-btn-down" data-key="CHANNELDOWN" data-repeat aria-label="Channel down"><svg><use href="#i-up"/></svg></button>
+    </div>
+  </div>
+
+  <section class="apps-wrap" aria-label="Apps">
+    <div class="apps" id="apps"></div>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- Sheets -->
+<div class="scrim" id="scrim"></div>
+
+<section class="sheet" id="sheet-inputs" aria-label="Inputs" role="dialog">
+  <div class="sheet-head"><h2>Inputs</h2><button class="icon-btn" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <div class="list" id="inputList"></div>
+</section>
+
+<section class="sheet" id="sheet-keyboard" aria-label="Keyboard" role="dialog">
+  <div class="sheet-head"><h2>Type on TV</h2><button class="icon-btn" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <p class="sheet-note">Select a search box on the TV first. Letters appear on the TV as you type.</p>
+  <input class="text-in" id="textIn" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type here" enterkeyhint="search">
+  <div class="sheet-actions">
+    <button class="btn" id="textClear">Clear</button>
+    <button class="btn btn-primary" id="textGo">Search on TV</button>
+  </div>
+</section>
+
+<section class="sheet" id="sheet-numbers" aria-label="Number pad" role="dialog">
+  <div class="sheet-head"><h2>Numbers and more</h2><button class="icon-btn" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <div class="numpad">
+    <button class="key" data-key="1">1</button><button class="key" data-key="2">2</button><button class="key" data-key="3">3</button>
+    <button class="key" data-key="4">4</button><button class="key" data-key="5">5</button><button class="key" data-key="6">6</button>
+    <button class="key" data-key="7">7</button><button class="key" data-key="8">8</button><button class="key" data-key="9">9</button>
+    <button class="key key-text" data-key="LIST">List</button><button class="key" data-key="0">0</button><button class="key key-text" data-key="DASH">–</button>
+  </div>
+  <div class="colors">
+    <button class="key key-color c-red" data-key="RED" aria-label="Red"></button>
+    <button class="key key-color c-green" data-key="GREEN" aria-label="Green"></button>
+    <button class="key key-color c-yellow" data-key="YELLOW" aria-label="Yellow"></button>
+    <button class="key key-color c-blue" data-key="BLUE" aria-label="Blue"></button>
+  </div>
+  <div class="extras">
+    <button class="key key-text" data-key="GUIDE">Guide</button>
+    <button class="key key-text" data-key="INFO">Info</button>
+    <button class="key key-text" data-key="QMENU">Quick menu</button>
+    <button class="key key-text" data-key="STOP">Stop</button>
+  </div>
+</section>
+
+<section class="sheet" id="sheet-settings" aria-label="Settings" role="dialog">
+  <div class="sheet-head"><h2>Settings</h2><button class="icon-btn" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <dl class="facts">
+    <div><dt>TV</dt><dd id="factName">–</dd></div>
+    <div><dt>Address</dt><dd id="factHost">–</dd></div>
+  </dl>
+  <div class="sheet-actions sheet-actions-stack">
+    <button class="btn" data-sheet="setup">Change TV or reconnect</button>
+    <button class="btn" id="screenOffBtn">Turn screen off, keep sound</button>
+    <button class="btn" id="shareBtn"><svg><use href="#i-share"/></svg>Share this remote</button>
+    <button class="btn btn-quiet" id="unpairBtn">Reset pairing</button>
+  </div>
+  <p class="sheet-note" id="shareNote"></p>
+</section>
+
+<section class="sheet" id="sheet-setup" aria-label="Connect to your TV" role="dialog">
+  <div class="sheet-head"><h2>Connect to your TV</h2><button class="icon-btn" data-close aria-label="Close"><svg><use href="#i-close"/></svg></button></div>
+  <ol class="steps">
+    <li>
+      <p>Turn the TV on and keep this phone on the same Wi-Fi.</p>
+    </li>
+    <li>
+      <label class="field">
+        <span>Enter the TV’s IP address. On the TV it’s under Settings, Network, Wi-Fi connection, Advanced Wi-Fi settings.</span>
+        <input id="hostIn" inputmode="decimal" placeholder="192.168.1.20" autocomplete="off">
+      </label>
+    </li>
+    <li>
+      <p>Allow the TV’s security certificate. Your browser will say the connection isn’t private: tap <b>Advanced</b> (<b>Show details</b> on iPhone), then <b>Proceed</b> (<b>visit this website</b>). A blank or error page after that is normal. Come back to this tab.</p>
+      <button class="btn" id="certBtn">Open the TV’s certificate page</button>
+    </li>
+    <li>
+      <p>Connect, then accept the prompt on the TV with its own remote. If your browser asks to access devices on your local network, allow it.</p>
+      <button class="btn btn-primary" id="connectBtn">Connect</button>
+    </li>
+  </ol>
+  <p class="sheet-note">Browsers can’t send the signal that turns a TV on, so use the TV’s own remote for that. This remote takes over once it’s on.</p>
+</section>
+
+<script src="pairing.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
