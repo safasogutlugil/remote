@@ -554,8 +554,13 @@
     });
 
     // setup
+    // decimal keypads in some regions (Turkish, German…) only offer a comma
+    $('#hostIn').addEventListener('input', (e) => {
+        const el = e.target;
+        if (el.value.includes(',')) el.value = el.value.replace(/,/g, '.');
+    });
     function readHost() {
-        const v = $('#hostIn').value.trim().replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
+        const v = $('#hostIn').value.trim().replace(/,/g, '.').replace(/^https?:\/\//, '').replace(/[:/].*$/, '');
         if (!/^(\d{1,3}\.){3}\d{1,3}$|^[a-z0-9-]+(\.[a-z0-9-]+)*$/i.test(v)) {
             toast('Enter the TV’s IP address, like 192.168.1.20', true);
             return '';
